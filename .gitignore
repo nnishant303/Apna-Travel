@@ -1,1 +1,17 @@
-node_modules
+# Prevent pushing unnecessary files and folders
+
+# Node modules
+node_modules/
+
+# Build folders
+dist/
+build/
+
+# Environment files
+.env
+
+# OS/Editor-specific
+.DS_Store
+*.log
+.vscode/
+.idea/

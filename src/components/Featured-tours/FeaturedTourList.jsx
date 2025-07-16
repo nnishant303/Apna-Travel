@@ -7,7 +7,7 @@ const FeaturedTourList = () => {
   return (
     <>
       {tourData?.map((tour) => (
-        <Col lg="3" className="mb-4" key={tour.id}>
+        <Col lg="3" sm="6" xs="12" className="mb-4" key={tour.id}>
           <TourCard tour={tour} />
         </Col>
       ))}

@@ -37,7 +37,8 @@
 }
 
 .hero__img-box {
-    padding-top: 2rem;
+    padding-top: 1rem;
+    width: 100%;
 }
 
 .services__subtitle {

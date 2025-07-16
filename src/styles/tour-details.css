@@ -28,13 +28,14 @@
     font-size: 1.1rem;
 }
 
-.tour__extra-details{
-    display: flex;
-    align-items: center;
-    column-gap: 2.7rem;
-    margin-top: 1rem;
-    margin-bottom: 2.5rem;
+.tour__extra-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
 }
+
 
 .tour__info h5{
     margin-bottom: 1rem;
