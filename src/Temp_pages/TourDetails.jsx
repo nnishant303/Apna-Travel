@@ -10,7 +10,7 @@ import Booking from "../components/Booking/Booking";
 const TourDetails = () => {
   const { id } = useParams();
   const reviewMsgRef = useRef('')
-  const [tourRating, setTourRating] = useState(null)
+  const [, setTourRating] = useState(null)
 
   // this is an  static data later we will call our API and load our datafrom database
   const tour = tourData.find(tour => tour.id === id);
@@ -36,7 +36,7 @@ const TourDetails = () => {
   //submit request to the server
   const submitHandler = e=>{
     e.preventDefault()
-    const reviewText = reviewMsgRef.current.value
+    // const reviewText = reviewMsgRef.current.value
 
     // later will call our api
   };
