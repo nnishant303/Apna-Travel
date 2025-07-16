@@ -27,7 +27,7 @@ const Home = () => {
               <div className="hero__content">
                 <div className="hero__subtitle d-flex align-items-center">
                   <Subtitle subtitle={"Know Before You Go"} />
-                  <img src={worldImg} alt="World Icon" /> {/* Added alt text */}
+                  <img src={worldImg} alt="World icon representing travel" /> {/* Removed "Icon" */}
                 </div>
                 <h1>
                   Travelling opens the door to creating{" "}
@@ -45,17 +45,17 @@ const Home = () => {
             {/* Hero Image/Video Columns */}
             <Col lg="2" md="4" sm="6" xs="12"> {/* Stacks appropriately on smaller screens */}
               <div className="hero__img-box">
-                <img src={heroImg} alt="Hero Image 1" /> {/* Added alt text */}
+                <img src={heroImg} alt="Scenic travel destination" /> {/* Removed "Hero Image 1" */}
               </div>
             </Col>
             <Col lg="2" md="4" sm="6" xs="12"> {/* Stacks appropriately on smaller screens */}
               <div className="hero__img-box mt-4">
-                <video src={heroVideo} alt="Hero Video" controls /> {/* Added alt text */}
+                <video src={heroVideo} alt="Travel video" controls /> {/* Removed "Hero Video" */}
               </div>
             </Col>
             <Col lg="2" md="4" sm="6" xs="12"> {/* Stacks appropriately on smaller screens */}
               <div className="hero__img-box mt-5">
-                <img src={heroImg02} alt="Hero Image 2" /> {/* Added alt text */}
+                <img src={heroImg02} alt="Another scenic travel destination" /> {/* Removed "Hero Image 2" */}
               </div>
             </Col>
 
@@ -89,7 +89,10 @@ const Home = () => {
               <Subtitle subtitle={"Explore"} />
               <h2 className="featured__tour-title">Our featured tours</h2>
             </Col>
-            <FeaturedTourList />
+            {/* Corrected: FeaturedTourList wrapped in a Col */}
+            <Col lg="12">
+              <FeaturedTourList />
+            </Col>
           </Row>
         </Container>
       </section>
@@ -128,7 +131,7 @@ const Home = () => {
             </Col>
             <Col lg="6" md="12"> {/* Takes 6 columns on large, full width on medium/small */}
               <div className="experience__img">
-                <img src={experienceImg} alt="Experience Image" /> {/* Added alt text */}
+                <img src={experienceImg} alt="People enjoying a travel experience" /> {/* Removed "Experience Image" */}
               </div>
             </Col>
           </Row>
