@@ -1,16 +1,19 @@
 import React from "react";
-import TourCard from "../../shared/TourCard";
 import tourData from "../../assets/data/tours";
-import { Col } from "reactstrap";
+import TourCard from "../../shared/TourCard";
+
+import { Row, Col } from "reactstrap";
 
 const FeaturedTourList = () => {
   return (
     <>
-      {tourData?.map((tour) => (
-        <Col lg="3" sm="6" xs="12" className="mb-4" key={tour.id}>
-          <TourCard tour={tour} />
-        </Col>
-      ))}
+      <Row>
+        {tourData?.map((tour) => (
+          <Col lg="3" md="6" sm="6" xs="12" className="mb-4" key={tour.id}>
+            <TourCard tour={tour} />
+          </Col>
+        ))}
+      </Row>
     </>
   );
 };

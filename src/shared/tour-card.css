@@ -88,3 +88,7 @@
 .booking__btn a:hover{
     color: #fff;
 }
+
+.tour__card {
+  width: 100%;
+}
