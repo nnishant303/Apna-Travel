@@ -165,6 +165,18 @@
     .experience__img img {
         width: 70%; /* Adjust image width */
     }
+
+    /* Search Bar Specifics for Tablets */
+    .search__bar {
+        padding: 1rem; /* Adjust padding */
+    }
+    .search__bar .form__group {
+        width: 33.33%; /* Distribute evenly */
+        border-right: none !important; /* Remove borders between items */
+    }
+    .search__bar .form__group input {
+        font-size: 0.9rem;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
@@ -209,6 +221,33 @@
     }
     .experience__img img {
         width: 90%; /* Make image wider on very small screens */
+    }
+
+    /* Search Bar Specifics for Mobile */
+    .search__bar {
+        flex-direction: column; /* Stack items vertically */
+        padding: 1rem;
+    }
+    .search__bar .form__group {
+        width: 100%; /* Each item takes full width */
+        border-right: none !important;
+        border-bottom: 1px solid var(--secondary-color); /* Add bottom border for separation */
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+    .search__bar .form__group:last-child {
+        border-bottom: none; /* No border on last item */
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .search__bar .form__group h6 {
+        font-size: 1rem;
+    }
+    .search__bar .form__group input {
+        font-size: 0.9rem;
+    }
+    .search__bar span {
+        font-size: 1.2rem; /* Adjust icon size */
     }
 }
 
@@ -260,5 +299,16 @@
     }
     .experience__img img {
         width: 100%;
+    }
+
+    /* Search Bar Specifics for Extra Small Devices */
+    .search__bar .form__group h6 {
+        font-size: 0.9rem;
+    }
+    .search__bar .form__group input {
+        font-size: 0.8rem;
+    }
+    .search__bar span {
+        font-size: 1rem;
     }
 }
