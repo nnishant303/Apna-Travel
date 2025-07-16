@@ -22,11 +22,12 @@ const Home = () => {
       <section>
         <Container>
           <Row>
-            <Col lg="6">
+            {/* Hero Content Column */}
+            <Col lg="6" md="12"> {/* Takes 6 columns on large, full width on medium/small */}
               <div className="hero__content">
                 <div className="hero__subtitle d-flex align-items-center">
                   <Subtitle subtitle={"Know Before You Go"} />
-                  <img src={worldImg} alt="" />
+                  <img src={worldImg} alt="World Icon" /> {/* Added alt text */}
                 </div>
                 <h1>
                   Travelling opens the door to creating{" "}
@@ -40,22 +41,28 @@ const Home = () => {
                 </p>
               </div>
             </Col>
-            <Col lg="2">
+
+            {/* Hero Image/Video Columns */}
+            <Col lg="2" md="4" sm="6" xs="12"> {/* Stacks appropriately on smaller screens */}
               <div className="hero__img-box">
-                <img src={heroImg} alt="" />
+                <img src={heroImg} alt="Hero Image 1" /> {/* Added alt text */}
               </div>
             </Col>
-            <Col lg="2">
+            <Col lg="2" md="4" sm="6" xs="12"> {/* Stacks appropriately on smaller screens */}
               <div className="hero__img-box mt-4">
-                <video src={heroVideo} alt="" controls />
+                <video src={heroVideo} alt="Hero Video" controls /> {/* Added alt text */}
               </div>
             </Col>
-            <Col lg="2">
+            <Col lg="2" md="4" sm="6" xs="12"> {/* Stacks appropriately on smaller screens */}
               <div className="hero__img-box mt-5">
-                <img src={heroImg02} alt="" />
+                <img src={heroImg02} alt="Hero Image 2" /> {/* Added alt text */}
               </div>
             </Col>
-            <SearchBar />
+
+            {/* SearchBar Column - Must be inside a Col */}
+            <Col lg="12" className="mt-5"> {/* Takes full width below hero content and images */}
+              <SearchBar />
+            </Col>
           </Row>
         </Container>
       </section>
@@ -64,10 +71,11 @@ const Home = () => {
       <section>
         <Container>
           <Row>
-            <Col lg="3">
+            <Col lg="3" md="12"> {/* Takes 3 columns on large, full width on medium/small */}
               <h5 className="services__subtitle">What we serve</h5>
               <h2 className="services__title">We offer our best services</h2>
             </Col>
+            {/* Assuming ServiceList handles its own column distribution internally */}
             <ServiceList />
           </Row>
         </Container>
@@ -90,7 +98,7 @@ const Home = () => {
       <section>
         <Container>
           <Row>
-            <Col lg="6">
+            <Col lg="6" md="12"> {/* Takes 6 columns on large, full width on medium/small */}
               <div className="experience__content">
                 <Subtitle subtitle={"Experience"} />
                 <h2>
@@ -118,9 +126,9 @@ const Home = () => {
                 </div>
               </div>
             </Col>
-            <Col lg="6">
+            <Col lg="6" md="12"> {/* Takes 6 columns on large, full width on medium/small */}
               <div className="experience__img">
-                <img src={experienceImg} alt="" />
+                <img src={experienceImg} alt="Experience Image" /> {/* Added alt text */}
               </div>
             </Col>
           </Row>

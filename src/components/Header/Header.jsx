@@ -22,6 +22,7 @@ const nav__links = [
 
 const Header = () => {
   const headerRef = useRef(null);
+  const menuRef = useRef(null); // Ref for the navigation menu
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -59,18 +60,21 @@ const Header = () => {
     return () => window.removeEventListener("scroll", stickyHeaderFunc);
   }, []);
 
+  // Function to toggle mobile menu
+  const toggleMenu = () => menuRef.current.classList.toggle("show__menu");
+
   return (
     <header className="header" ref={headerRef}>
       <Container>
         <Row>
           <div className="nav__wrapper d-flex align-items-center justify-content-between">
-            {/* ===========  logo =========== */}
+            {/* =========== logo =========== */}
             <div className="logo">
               <img src={logo} alt="logo" />
             </div>
 
-            {/* ===========  Menu  Start=========== */}
-            <div className="navigation">
+            {/* =========== Menu Start =========== */}
+            <div className="navigation" ref={menuRef} onClick={toggleMenu}> {/* Added ref and onClick for mobile menu */}
               <ul className="menu d-flex align-items-center gap-5">
                 {nav__links.map((item, index) => (
                   <li className="nav__item" key={index}>
@@ -86,7 +90,7 @@ const Header = () => {
                 ))}
               </ul>
             </div>
-            {/* ===========  Menu  end=========== */}
+            {/* =========== Menu end =========== */}
 
             <div className="nav__right d-flex align-items-center gap-4">
               <div className="nav__btns d-flex align-items-center gap-4">
@@ -106,7 +110,8 @@ const Header = () => {
                 )}
               </div>
 
-              <span className="mobile__menu">
+              {/* Mobile menu icon */}
+              <span className="mobile__menu" onClick={toggleMenu}>
                 <i className="ri-menu-line"></i>
               </span>
             </div>

@@ -37,16 +37,16 @@ const quick__links2 = [
 ];
 
 const Footer = () => {
-
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
 
   return (
     <footer className="footer">
       <Container>
         <Row>
-          <Col lg="3">
+          {/* Logo and Description Column */}
+          <Col lg="3" md="6" sm="12"> {/* Takes 3 on large, 6 on medium, full width on small */}
             <div className="logo">
-              <img src={logo} alt="" />
+              <img src={logo} alt="logo" />
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Maiores, magnam!
@@ -55,29 +55,30 @@ const Footer = () => {
               <div className="social__links d-flex align-items-center gap-4">
                 <span>
                   <Link to="#">
-                    <i class="ri-youtube-line"></i>
+                    <i className="ri-youtube-line"></i> {/* Changed class to className */}
                   </Link>
                 </span>
                 <span>
                   <Link to="#">
-                    <i class="ri-github-fill"></i>
+                    <i className="ri-github-fill"></i> {/* Changed class to className */}
                   </Link>
                 </span>
                 <span>
                   <Link to="#">
-                    <i class="ri-facebook-circle-line"></i>
+                    <i className="ri-facebook-circle-line"></i> {/* Changed class to className */}
                   </Link>
                 </span>
                 <span>
                   <Link to="#">
-                    <i class="ri-instagram-line"></i>
+                    <i className="ri-instagram-line"></i> {/* Changed class to className */}
                   </Link>
                 </span>
               </div>
             </div>
           </Col>
 
-          <Col lg="3">
+          {/* Discover Links Column */}
+          <Col lg="3" md="6" sm="12"> {/* Takes 3 on large, 6 on medium, full width on small */}
             <h5 className="footer__link-title">Discover</h5>
 
             <ListGroup className="footer__quick-links">
@@ -88,7 +89,9 @@ const Footer = () => {
               ))}
             </ListGroup>
           </Col>
-          <Col lg="3">
+
+          {/* Quick Links Column */}
+          <Col lg="3" md="6" sm="12"> {/* Takes 3 on large, 6 on medium, full width on small */}
             <h5 className="footer__link-title">Quick Links</h5>
 
             <ListGroup className="footer__quick-links">
@@ -99,45 +102,45 @@ const Footer = () => {
               ))}
             </ListGroup>
           </Col>
-          <Col lg="3">
+
+          {/* Contact Info Column */}
+          <Col lg="3" md="6" sm="12"> {/* Takes 3 on large, 6 on medium, full width on small */}
             <h5 className="footer__link-title">Contact</h5>
 
             <ListGroup className="footer__quick-links">
               <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-3">
                 <h6 className="mb-0 d-flex align-items-center gap-2">
                   <span>
-                    <i class="ri-map-pin-line"></i>
+                    <i className="ri-map-pin-line"></i> {/* Changed class to className */}
                   </span>
                   Address:
                 </h6>
-
                 <p className="mb-0">Tech Titans , India</p>
               </ListGroupItem>
               <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-3">
                 <h6 className="mb-0 d-flex align-items-center gap-2">
                   <span>
-                    <i class="ri-mail-line"></i>
+                    <i className="ri-mail-line"></i> {/* Changed class to className */}
                   </span>
                   Email:
                 </h6>
-
                 <p className="mb-0">paliwalnishant0@gmail.com</p>
               </ListGroupItem>
               <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-3">
                 <h6 className="mb-0 d-flex align-items-center gap-2">
                   <span>
-                    <i class="ri-phone-fill"></i>
+                    <i className="ri-phone-fill"></i> {/* Changed class to className */}
                   </span>
                   Phone:
                 </h6>
-
                 <p className="mb-0">+0123456789</p>
               </ListGroupItem>
             </ListGroup>
           </Col>
 
+          {/* Copyright Column */}
           <Col lg='12' className='text-center pt-5'>
-              <p className="copyright">copyright {year}, design and develop by Teach Titans. All rights reserved.</p>
+            <p className="copyright">copyright {year}, design and develop by Teach Titans. All rights reserved.</p>
           </Col>
         </Row>
       </Container>
